@@ -108,32 +108,32 @@ class DataAnnotator:
                 except Exception as e:
                     print(f"❌ Failed to initialize OpenRouter detector: {e}")
                     return False
-            elif provider == "groundingdino":
-                print(f"🟣 Using Grounding DINO")
-                try:
-                     detector = GroundingDinoHFDetection(
-                        model_name=model,  # e.g. "IDEA-Research/grounding-dino-tiny" or "...-base"
-                        object_to_detect=class_names[0],
-                        problem_statement=problem_statement,
-                        sample_images=sample_images,
-                        confidence_threshold=confidence_threshold,
-                        text_threshold=0.30,
-                        device=get_device()
-                    )
-                except Exception as e:
-                    print(f"❌ Failed to initialize Grounding DINO detector: {e}")
-                    return False
-            elif provider == "owl":
-                print(f"🟣 Using OWL detector with model: {model}")
-                try:
-                    detector = OWLDetection(
-                        model_name=model,  # e.g. "google/owlv2-base-patch16-ensemble"
-                        confidence_threshold=confidence_threshold,
-                        device=get_device()
-                    )
-                except Exception as e:
-                    print(f"❌ Failed to initialize OWL detector: {e}")
-                    return False
+            # elif provider == "groundingdino":
+            #     print(f"🟣 Using Grounding DINO")
+            #     try:
+            #          detector = GroundingDinoHFDetection(
+            #             model_name=model,  # e.g. "IDEA-Research/grounding-dino-tiny" or "...-base"
+            #             object_to_detect=class_names[0],
+            #             problem_statement=problem_statement,
+            #             sample_images=sample_images,
+            #             confidence_threshold=confidence_threshold,
+            #             text_threshold=0.30,
+            #             device=get_device()
+            #         )
+            #     except Exception as e:
+            #         print(f"❌ Failed to initialize Grounding DINO detector: {e}")
+            #         return False
+            # elif provider == "owl":
+            #     print(f"🟣 Using OWL detector with model: {model}")
+            #     try:
+            #         detector = OWLDetection(
+            #             model_name=model,  # e.g. "google/owlv2-base-patch16-ensemble"
+            #             confidence_threshold=confidence_threshold,
+            #             device=get_device()
+            #         )
+            #     except Exception as e:
+            #         print(f"❌ Failed to initialize OWL detector: {e}")
+            #         return False
             elif provider == "reasoning":
                 print(f"🟣 Using Reasoning detector with model: {model}")
                 try:

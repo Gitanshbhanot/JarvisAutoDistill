@@ -45,32 +45,32 @@ export const modelOptions = [
   //   value: "groundingdino:IDEA-Research/grounding-dino-tiny",
   //   label: "Grounding DINO Tiny (Fast, Lower Accuracy)",
   // },
-  {
-    value: "groundingdino:IDEA-Research/grounding-dino-base",
-    label: "Grounding DINO Base (Slower, Higher Accuracy)",
-  },
+  // {
+  //   value: "groundingdino:IDEA-Research/grounding-dino-base",
+  //   label: "Grounding DINO Base (Slower, Higher Accuracy)",
+  // },
   // 🟣 New: OWL options
   // {
   //   value: "owl:google/owlv2-base-patch16-ensemble",
   //   label: "OWL-V2 Base Patch16 Ensemble",
   // },
-  {
-    value: "owl:google/owlvit-base-patch32",
-    label: "OWL-ViT Base Patch32 (Lightweight)",
-  },
+  // {
+  //   value: "owl:google/owlvit-base-patch32",
+  //   label: "OWL-ViT Base Patch32 (Lightweight)",
+  // },
   // 🟣 New: Reasoning options
   {
     value: "reasoning:openai/o4-mini",
     label: "Reasoning: O4 Mini",
   },
   // 🟣 New: DSPy and GEPA options
-  {
-    value: "dspyGepa:gemini-2.5-flash",
-    label: "DSPy & GEPA: Gemini 2.5 Flash",
-  },
+  // {
+  //   value: "dspyGepa:gemini-2.5-flash",
+  //   label: "DSPy & GEPA: Gemini 2.5 Flash",
+  // },
     // 🟣 New: SAHI options
-    {
-      value: "samgemini:gemini-2.5-flash",
-      label: "Sam & Gemini 2.5 Flash",
-    },
+    // {
+    //   value: "samgemini:gemini-2.5-flash",
+    //   label: "Sam & Gemini 2.5 Flash",
+    // },
 ];
