@@ -379,7 +379,8 @@ def view_annotated_image(dataset_name, image_choice, class_names, include_classe
                 lines = [ln.strip() for ln in f if ln.strip()]
 
         # Filter lines if a subset is requested
-        def _line_class_id(ln: str) -> int | None:
+        from typing import Union
+        def _line_class_id(ln: str) -> Union[int, None]:
             try:
                 return int(ln.split()[0])
             except Exception:

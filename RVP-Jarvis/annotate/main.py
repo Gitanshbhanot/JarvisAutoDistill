@@ -12,8 +12,8 @@ from annotate.detectors.owl import OWLDetection
 from annotate.detectors.reasoning import AdvancedReasoningDetection
 from annotate.detectors.sahiTiler import SAHIDetector
 from annotate.detectors.twoStage import TwoStageDetector
-from annotate.detectors.dspyGepa import DSPyGepaGeminiDetection
-from annotate.detectors.samGemini import SAMGeminiDetection
+# from annotate.detectors.dspyGepa import DSPyGepaGeminiDetection
+# from annotate.detectors.samGemini import SAMGeminiDetection
 from annotate.detector import BaseDetector, get_device
 from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError
 from core.state import app_state
@@ -178,37 +178,37 @@ class DataAnnotator:
                 except Exception as e:
                     print(f"❌ Failed to initialize Two-Stage detector: {e}")
                     return False
-            elif provider == "dspyGepa":
-                print(f"🟢 Using DSPy & GEPA detector with model: {model}")
-                try:
-                    detector = DSPyGepaGeminiDetection(
-                        model_name=model,
-                        object_to_detect=class_names[0],
-                        problem_statement=problem_statement,
-                        sample_images=sample_images,
-                        confidence_threshold=confidence_threshold,
-                        image_size=image_size,
-                        upscale_image=upscale_image
-                    )
-                except Exception as e:
-                    print(f"❌ Failed to initialize DSPy & GEPA detector: {e}")
-                    return False
-            elif provider == "samgemini":
-                print(f"🟢 Using SAM-enhanced Gemini detector with model: {model}")
-                try:
-                    detector = SAMGeminiDetection(
-                        model_name=model,
-                        object_to_detect=class_names[0],
-                        problem_statement=problem_statement,
-                        sample_images=sample_images,
-                        confidence_threshold=confidence_threshold,
-                        image_size=image_size,
-                        upscale_image=upscale_image,
-                        golden_examples=golden_examples or []
-                    )
-                except Exception as e:
-                    print(f"❌ Failed to initialize SAM-enhanced Gemini detector: {e}")
-                    return False
+            # elif provider == "dspyGepa":
+            #     print(f"🟢 Using DSPy & GEPA detector with model: {model}")
+            #     try:
+            #         detector = DSPyGepaGeminiDetection(
+            #             model_name=model,
+            #             object_to_detect=class_names[0],
+            #             problem_statement=problem_statement,
+            #             sample_images=sample_images,
+            #             confidence_threshold=confidence_threshold,
+            #             image_size=image_size,
+            #             upscale_image=upscale_image
+            #         )
+            #     except Exception as e:
+            #         print(f"❌ Failed to initialize DSPy & GEPA detector: {e}")
+            #         return False
+            # elif provider == "samgemini":
+            #     print(f"🟢 Using SAM-enhanced Gemini detector with model: {model}")
+            #     try:
+            #         detector = SAMGeminiDetection(
+            #             model_name=model,
+            #             object_to_detect=class_names[0],
+            #             problem_statement=problem_statement,
+            #             sample_images=sample_images,
+            #             confidence_threshold=confidence_threshold,
+            #             image_size=image_size,
+            #             upscale_image=upscale_image,
+            #             golden_examples=golden_examples or []
+            #         )
+            #     except Exception as e:
+            #         print(f"❌ Failed to initialize SAM-enhanced Gemini detector: {e}")
+            #         return False
             else:
                 print(f"❌ Error: Unknown provider '{provider}' in model name '{model_name}'")
                 return False

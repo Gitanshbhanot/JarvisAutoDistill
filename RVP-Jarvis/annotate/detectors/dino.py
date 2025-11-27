@@ -1,5 +1,5 @@
 # backends/grounding_dino_hf.py
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Union
 from PIL import Image
 import logging, time
 from ..detector import BaseDetector
@@ -29,9 +29,9 @@ class GroundingDinoHFDetection(BaseDetector):
         object_to_detect: str = "",
         problem_statement: str = "",
         sample_images: List[Image.Image] = None,
-        confidence_threshold: float | Dict[str, float] = 0.45,
+        confidence_threshold: Union[float, Dict[str, float]] = 0.45,
         text_threshold: float = 0.3,
-        nms_iou: float | Dict[str, float] = 0.5,
+        nms_iou: Union[float, Dict[str, float]] = 0.5,
         device: str = None,
     ):
         if AutoProcessor is None:
