@@ -1,0 +1,2 @@
+cls,name,TP,FP,FN,precision,recall,f1,avg_iou,gt_count
+0,spraying_arm,41,69,59,0.372727,0.410000,0.390476,0.672769,100

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Plus Jakarta Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #FAFAFA;
+}
+
+/* Headings */
+/* h1, h2, h3, h4, h5, h6, .font-orbitron {
+  font-family: "Orbitron", Helvetica, sans-serif;
+} */
+
+.container{
+  position: "fixed";
+  width: "90px";
+  height: "calc(100vh - 80px)";
+  background-color: "#024D87";
+  box-shadow:
+    "0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3)";
+  display: "flex";
+  flex: "column";
+  justify-content: space-between;
+  align-items: center ;
+  margin-top: "65px";
+  margin-left: "20px";
+  margin-bottom: "20px" ;
+  border-radius: "24px";
+  padding-bottom: "30px";
+}
+
+.chat-bubble {
+  background-color:#9cc3e0;
+  padding:16px 28px;
+  -webkit-border-radius: 20px;
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-radius: 20px;
+  -moz-border-radius-bottomleft: 2px;
+  border-radius: 20px;
+  border-bottom-left-radius: 2px;
+  display:inline-block;
+}
+.typing {
+  align-items: center;
+  display: flex;
+  height: 17px;
+}
+
+.typing .dot {
+  animation: mercuryTypingAnimation 1.8s infinite ease-in-out;
+  background-color: #024D87 ;
+  border-radius: 50%;
+  height: 7px;
+  margin-right: 4px;
+  vertical-align: middle;
+  width: 7px;
+  display: inline-block;
+}
+.typing .dot:nth-child(1) {
+  animation-delay: 200ms;
+}
+.typing .dot:nth-child(2) {
+  animation-delay: 300ms;
+}
+.typing .dot:nth-child(3) {
+  animation-delay: 400ms;
+}
+.typing .dot:last-child {
+  margin-right: 0;
+}
+
+@keyframes mercuryTypingAnimation {
+  0% {
+    transform: translateY(0px);
+    background-color:#2c7cb8;
+  }
+  28% {
+    transform: translateY(-7px);
+    background-color:#024D87; 
+  }
+  44% {
+    transform: translateY(0px);
+    background-color: #024D87; ;
+  }
+}
+
+/* workforce beatloader */
+@keyframes beatloader {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes beatloader-delay-0 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes beatloader-delay-1000 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes beatloader-delay-2000 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.animate-beatloader-item {
+  width: 2px; /* Set the desired width */
+  height: 2px; /* Set the desired height */
+  background-color: #79767D;
+  border-radius: 50%;
+  margin: 5px; /* Adjust margin as needed */
+  animation: beatloader 4s linear infinite;
+}
+
+.animate-beatloader-item:nth-child(2) {
+  animation: beatloader-delay-1000 2s linear infinite;
+}
+
+.animate-beatloader-item:nth-child(3) {
+  animation: beatloader-delay-2000 2s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Adjust the width as per your preference */
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Set a transparent track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc; /* Set a light background for the scrollbar handle */
+  border-radius: 5px; /* Add a border radius for a smoother appearance */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999; /* Darken the handle color on hover */
+}
+

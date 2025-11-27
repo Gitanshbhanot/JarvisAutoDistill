@@ -1,0 +1,174 @@
+{
+  "iou_thresholds": [
+    0.5,
+    0.75
+  ],
+  "overall": {
+    "0.5": {
+      "TP": 41,
+      "FP": 69,
+      "FN": 59,
+      "precision": 0.37272727272727274,
+      "recall": 0.41,
+      "f1": 0.3904761904761905,
+      "avg_iou_of_matches": 0.6727692303967093
+    },
+    "0.75": {
+      "TP": 13,
+      "FP": 97,
+      "FN": 87,
+      "precision": 0.11818181818181818,
+      "recall": 0.13,
+      "f1": 0.12380952380952381,
+      "avg_iou_of_matches": 0.8139410350035986
+    }
+  },
+  "per_class": {
+    "0.5": {
+      "0": {
+        "name": "spraying_arm",
+        "TP": 41,
+        "FP": 69,
+        "FN": 59,
+        "precision": 0.37272727272727274,
+        "recall": 0.41,
+        "f1": 0.3904761904761905,
+        "avg_iou_of_matches": 0.6727692303967093,
+        "gt_count": 100
+      }
+    },
+    "0.75": {
+      "0": {
+        "name": "spraying_arm",
+        "TP": 13,
+        "FP": 97,
+        "FN": 87,
+        "precision": 0.11818181818181818,
+        "recall": 0.13,
+        "f1": 0.12380952380952381,
+        "avg_iou_of_matches": 0.8139410350035986,
+        "gt_count": 100
+      }
+    }
+  },
+  "images": {
+    "0.5": {
+      "images_with_gt": 100,
+      "images_with_pred": 99,
+      "images_with_zero_preds_but_gt": 1,
+      "images_with_any_true_positive": 41,
+      "detection_coverage_rate": 0.99,
+      "tp_image_rate": 0.41
+    },
+    "0.75": {
+      "images_with_gt": 100,
+      "images_with_pred": 99,
+      "images_with_zero_preds_but_gt": 1,
+      "images_with_any_true_positive": 13,
+      "detection_coverage_rate": 0.99,
+      "tp_image_rate": 0.13
+    }
+  },
+  "mAP": {
+    "0.5": {
+      "mAP": 0.20768620152498155,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.20768620152498155,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.55": {
+      "mAP": 0.14420882072580588,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.14420882072580588,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.6": {
+      "mAP": 0.11577827736224328,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.11577827736224328,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.65": {
+      "mAP": 0.08463784869362023,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.08463784869362023,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.7": {
+      "mAP": 0.07118747696011762,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.07118747696011762,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.75": {
+      "mAP": 0.047918749080105474,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.047918749080105474,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.8": {
+      "mAP": 0.02432288954304615,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.02432288954304615,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.85": {
+      "mAP": 0.0015790372140662343,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.0015790372140662343,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.9": {
+      "mAP": 0.0004125412541254125,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.0004125412541254125,
+          "gt_count": 100
+        }
+      }
+    },
+    "0.95": {
+      "mAP": 0.0,
+      "per_class_AP": {
+        "0": {
+          "name": "spraying_arm",
+          "AP": 0.0,
+          "gt_count": 100
+        }
+      }
+    }
+  }
+}

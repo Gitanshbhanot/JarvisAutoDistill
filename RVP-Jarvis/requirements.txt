@@ -1,0 +1,43 @@
+streamlit>=1.47.1
+pandas>=2.3.0
+pillow>=11.2.1
+ultralytics>=8.2.0
+google-genai>=0.3.0
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+numpy>=1.23.0
+opencv-python>=4.8.0
+
+# OpenCV contrib build (includes dnn_superres for EDSR/ESPCN/FSRCNN)
+opencv-contrib-python>=4.8.0
+
+# Torch (choose CPU/GPU/MPS build via environment)
+torch>=2.2.0
+torchvision>=0.17.0
+
+flask>=3.0.0
+flask-cors>=4.0.0
+gradio>=4.0.0
+gunicorn>=23.0.0
+
+# Hugging Face ecosystem (OWL + GroundingDINO via transformers)
+transformers>=4.45.0
+accelerate>=0.33.0
+huggingface-hub>=0.23.0
+safetensors>=0.4.2
+
+# GroundingDINO runtime deps (used by the HF implementation)
+timm>=0.9.0
+einops>=0.6.0
+
+# Optional (skip on Windows if it gives trouble)
+pycocotools>=2.0.7; platform_system!="Windows"
+
+#DSPy and GEPA
+dspy-ai>=2.5.0
+litellm>=1.45.0
+
+# SAM (Segment Anything Model) - EfficientSAM for samGemini detector
+# Install from GitHub for latest version with bug fixes
+# Also install and keep the SAM weights inside the weights folder
+# git+https://github.com/yformer/EfficientSAM.git
