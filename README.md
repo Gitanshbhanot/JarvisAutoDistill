@@ -595,7 +595,7 @@ For questions, issues, or suggestions, please open an issue on GitHub or contact
 
 <div align="center">
 
-**Built with ❤️ by the Jarvis Team**
+**Built with ❤️ by the Gitansh Bhanot**
 
 ⭐ Star us on GitHub if you find this project useful!
 
